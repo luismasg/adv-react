@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Link } from '@reach/router'
 
+import Refs from './1-refs'
 import Hooks from './2-custom-hooks'
 import DIYRedux from './4-DIY-redux'
 
@@ -39,6 +40,7 @@ ReactDOM.render(
   <main className="sans-serif">
     <Router>
       <Home path="/" />
+      <Refs path="refs/*" />
       <Hooks path="hooks/*" />
       <DIYRedux path="redux/*" />
     </Router>

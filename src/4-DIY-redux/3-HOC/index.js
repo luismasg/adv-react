@@ -6,10 +6,19 @@ function tick(WrappedComponent) {
       seconds: 0,
     }
     timer = 0
-    componentDidMount() {}
-    componentWillUnmount() {}
+    componentDidMount() {
+      this.timer = setTimeout(this.changeSecond, 1000)
+    }
+    componentWillUnmount() {
+      clearTimeout(this.timer)
+    }
 
-    changeSecond = () => {}
+    changeSecond = () => {
+      this.setState({
+        seconds: 1 + this.state.seconds,
+      })
+      this.timer = setTimeout(this.changeSecond, 1000)
+    }
     render() {
       return <WrappedComponent seconds={this.state.seconds} />
     }
@@ -23,6 +32,6 @@ DisplaySeconds.propTypes = {
 }
 
 export default function HOC() {
-  const HigherOrderComponetn = tick(DisplaySeconds)
-  return <HigherOrderComponetn />
+  const HigherOrderComponent = tick(DisplaySeconds)
+  return <HigherOrderComponent />
 }

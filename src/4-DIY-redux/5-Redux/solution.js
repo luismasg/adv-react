@@ -45,7 +45,24 @@ function createRedux(store) {
     mapDispatchToProps = () => ({}),
   ) => Component =>
     function Connected({ props }) {
-      return null
+      const ctx = useContext(Context)
+      const state = ctx.getState()
+      const [dispatchProps] = useState(() =>
+        mapDispatchToProps(ctx.dispatch, props),
+      )
+      const [stateForComponent, setState] = useState(() => {
+        const stateProps = mapStateToProps(state, props)
+        return { ...stateProps }
+      })
+
+      useEffect(() => {
+        return ctx.subscribe(() => {
+          const state = ctx.getState()
+          const stateProps = mapStateToProps(state, props)
+          setState({ ...stateProps })
+        })
+      }, [stateForComponent])
+      return <Component {...props} {...stateForComponent} {...dispatchProps} />
     }
 
   class ProviderWithStore extends React.Component {

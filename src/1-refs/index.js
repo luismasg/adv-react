@@ -3,6 +3,10 @@ import React from 'react'
 import { Router, Link } from '@reach/router'
 
 import Prework1 from './1-prework-createRef'
+import FocusCreateRef from './2-focus-createRef'
+import FocusUseRef from './3-focus-userRef'
+import Video from './4-video-createRef'
+import VideoUseRef from './5-video-useRef'
 
 const Home = () => (
   <section className="fl w-100">
@@ -14,10 +18,16 @@ const Home = () => (
             <Link to="prework-1">Create ref</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            Grapefruit
+            <Link to="focus-create-ref">Focus</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            Kiwi
+            <Link to="focus-useref">Focus useRef</Link>
+          </li>
+          <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+            <Link to="video">Video</Link>
+          </li>
+          <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+            <Link to="video-useref">Video Use Ref</Link>
           </li>
         </ul>
       </div>
@@ -30,6 +40,10 @@ export default function Refs() {
     <Router>
       <Home path="/" />
       <Prework1 path="prework-1" />
+      <FocusCreateRef path="focus-create-ref" />
+      <FocusUseRef path="focus-useref" />
+      <Video path="video" />
+      <VideoUseRef path="video-useref" />
     </Router>
   )
 }

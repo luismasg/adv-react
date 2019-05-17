@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 const validateAction = action => {
   if (!action || typeof action !== 'object' || Array.isArray(action)) {
@@ -9,7 +10,28 @@ const validateAction = action => {
   }
 }
 
-const createStore = reducer => {}
+const createStore = reducer => {
+  let state
+  const subscribers = []
+  let store = {
+    getState: () => state,
+    subscribe: handler => {
+      subscribers.push(handler)
+      return () => {
+        const index = subscribers.indexOf(handler)
+        if (index > 0) {
+          subscribers.splice(index, 1)
+        }
+      }
+    },
+    dispatch: action => {
+      state = reducer(state, action)
+      subscribers.forEach(handler => handler())
+    },
+  }
+  store.dispatch({ type: '@@redux/INIT' })
+  return store
+}
 
 const CREATE_NOTE = 'CREATE_NOTE'
 const UPDATE_NOTE = 'UPDATE_NOTE'
@@ -22,7 +44,43 @@ const initialState = {
   openNoteId: null,
 }
 
-const reducer = (state = initialState, action) => {}
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CREATE_NOTE: {
+      let newNote = {
+        id: state.nextNoteId,
+        content: '',
+      }
+      return {
+        ...state,
+        openNoteId: state.nextNoteId,
+        nextNoteId: state.nextNoteId + 1,
+        notes: {
+          ...state.notes,
+          [state.nextNoteId]: newNote,
+        },
+      }
+    }
+    case UPDATE_NOTE: {
+      let updatedNotes = {
+        ...state.notes,
+        [action.id]: {
+          ...state.notes[action.id],
+          content: action.content,
+        },
+      }
+      return { ...state, notes: updatedNotes }
+    }
+    case OPEN_NOTE: {
+      return { ...state, openNoteId: action.id }
+    }
+    case CLOSE_NOTE: {
+      return { ...state, openNoteId: null }
+    }
+  }
+
+  return state
+}
 
 const store = createStore(reducer)
 
@@ -133,9 +191,10 @@ class NoteAppContainer extends React.Component {
     this.onCloseNote = this.onCloseNote.bind(this)
   }
   componentDidMount() {
-    this.unsubscribe = this.props.store.subscribe(() =>
-      this.setState(this.props.store.getState()),
-    )
+    this.unsubscribe = this.props.store.subscribe(() => {
+      console.log('NoteAppContainer')
+      this.setState(this.props.store.getState())
+    })
   }
   componentWillUnmount() {
     this.unsubscribe()
@@ -180,7 +239,47 @@ NoteAppContainer.propTypes = {
   store: Object,
 }
 
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = props.store.getState()
+  }
+  componentDidMount() {
+    this.unsubscribe = this.props.store.subscribe(() => {
+      console.log('Header')
+      this.setState(this.props.store.getState())
+    })
+    axios
+      .get('https://icanhazdadjoke.com/', {
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+      .then(res => {
+        console.log('res', res)
+      })
+  }
+  render() {
+    console.log(this.state)
+    return <h1>{this.state.openNoteId === null ? 'Closed' : 'Open'}</h1>
+  }
+}
+
+Header.propTypes = {
+  store: Object,
+}
+
 export default function DIYRedux() {
-  return null
-  // return <NoteAppContainer store={store} />
+  return (
+    <>
+      <div>
+        <div>
+          <div>
+            <Header store={store} />
+          </div>
+        </div>
+      </div>
+      <NoteAppContainer store={store} />
+    </>
+  )
 }
