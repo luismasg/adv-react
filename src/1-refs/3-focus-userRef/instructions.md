@@ -1,0 +1,1 @@
+Este ejercicio es prácticamente igual que el anterior solo hay que user [`useRef`](https://reactjs.org/docs/hooks-reference.html#useref) en lugar de `React.createRef`.

@@ -6,9 +6,7 @@ function Focus() {
     <div className="pa4">
       <button
         onClick={() => {
-          if (ref.current !== null) {
-            ref.current.focus()
-          }
+          console.log(ref)
         }}
       >
         focus

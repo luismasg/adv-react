@@ -8,6 +8,10 @@ class Example extends React.Component {
     this.exampleRef = React.createRef()
   }
 
+  componentDidMount() {
+    console.log(this.exampleRef)
+  }
+
   render() {
     return (
       <div>
