@@ -1,4 +1,4 @@
-Este solo es un ejercicio para familiarizarlos con el api de (createRef)[https://reactjs.org/docs/refs-and-the-dom.html#creating-refs] 
+Este solo es un ejercicio para familiarizarlos con el api de [createRef](https://reactjs.org/docs/refs-and-the-dom.html#creating-refs) 
 
 El ejemplo ya esta medio resulto. Ya que el ref ya esta creado.
 
