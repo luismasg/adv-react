@@ -1,0 +1,36 @@
+.ref2-prework {
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+  background-color: #112;
+  h1 {
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+  }
+  input {
+    margin-top: 50px;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: #ffc600;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+    &:hover {
+      text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+  code {
+    border-radius: 4px;
+    padding: 10px;
+    background-color: lighten(#112, 10%);
+  }
+}
