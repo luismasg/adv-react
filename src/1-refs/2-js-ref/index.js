@@ -1,36 +1,12 @@
 import React from 'react'
+import './styles.scss'
 
 class Example extends React.Component {
-  state = {
-    flag: true,
-  }
-  constructor(props) {
-    super(props)
-
-    // Create the ref
-    this.exampleRef = React.createRef()
-    const refCont = { time: 0 }
-    this.ref1 = refCont
-    this.ref2 = refCont
-  }
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
-
   render() {
-    const { flag } = this.state
     return (
-      <div>
-        {flag ? 1 : 0}
-        <div>{this.ref2.time}</div>
-        <button
-          onClick={() => {
-            this.setState({ flag: !flag })
-          }}
-        >
-          click
-        </button>
+      <div className="ref2-prework">
+        <h1>React Ref - createRef</h1>
+        <code>state.value: </code>
       </div>
     )
   }

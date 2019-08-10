@@ -48,3 +48,5 @@ para esto usamos el metodo de ciclo de vida llamado `componentWillMount`
        clearTimeout(this.timer)
    }
    ```
+
+   Ahora cuando corremos la app , podemos ver que apesar de que estamos asignando el valor the `date.now()` a  `ref1` , cuando mostramos ref2 en pantalla su valor también se actualiza. esto es por que ambos son una referencia al mismo objeto original : ` {time:0}`
