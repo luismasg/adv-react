@@ -11,9 +11,9 @@ class CreateRef extends Component {
   handleAttachClick = () => {
     console.log(this.ulRef)
     if (this.ulRef.current !== null && this.addressRef.current.value !== '') {
-      const p = document.createElement('li')
-      p.innerText = this.addressRef.current.value
-      this.ulRef.current.append(p)
+      const listItem = document.createElement('li')
+      listItem.innerText = this.addressRef.current.value
+      this.ulRef.current.append(listItem)
 
       // puntos extra
       this.addressRef.current.value = ''
