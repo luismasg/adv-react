@@ -41,7 +41,7 @@ si probamos esto en el browser podemos ver como el cursor de texto se posiciona 
 Este es _similar_ al focus.
 creamos una ref llamada `addressRef`  y la asignamos al segundo input.
 Posteriormente dentro del método `handleDeleteClick`  queremos comprobar que la ref no sea nula para despues aplicarle el metodo remove al nodo.
-**_En este caso queremos aplicarle el metodo remove al  _** [elemento padre]('https://developer.mozilla.org/en-US/docs/Web/API/Node) dado a que está dentro de una `<label>`.
+**_En este caso queremos aplicarle el metodo remove al [elemento padre]('https://developer.mozilla.org/en-US/docs/Web/API/Node')_** dado a que está dentro de una `<label>`.
 si tenemos exito, deberia desaparecer el campo `address` junto con la etiqueta.
 en este punto es bueno aclarar que el nodo no se esconde, ni pierde opacidad. Se elimina del DOM.
 
