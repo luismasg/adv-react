@@ -10,7 +10,7 @@ class Video extends Component {
     return (
       <div className="pa3">
         <div className="fl w-100 pa2">
-          <video src={flowerVideo} ref={this.ref} />
+          <video src={flowerVideo} />
         </div>
         <div className="fl w-25 pa2">
           <button onClick={() => {}}>play</button>
