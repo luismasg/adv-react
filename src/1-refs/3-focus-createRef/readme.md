@@ -41,7 +41,7 @@ si probamos esto en el browser podemos ver como el cursor de texto se posiciona 
 Este es _similar_ al focus.
 creamos una ref llamada `addressRef`  y la asignamos al segundo input.
 Posteriormente dentro del método `handleDeleteClick`  queremos comprobar que la ref no sea nula para despues aplicarle el metodo remove al nodo.
-**_En este caso queremos aplicarle el metodo remove al [elemento padre]('https://developer.mozilla.org/en-US/docs/Web/API/Node)_** dado a que está dentro de una `<label>`.
+**_En este caso queremos aplicarle el metodo remove al  _** [elemento padre]('https://developer.mozilla.org/en-US/docs/Web/API/Node) dado a que está dentro de una `<label>`.
 si tenemos exito, deberia desaparecer el campo `address` junto con la etiqueta.
 en este punto es bueno aclarar que el nodo no se esconde, ni pierde opacidad. Se elimina del DOM.
 
@@ -50,7 +50,7 @@ en este punto es bueno aclarar que el nodo no se esconde, ni pierde opacidad. Se
 
 por ultimo vamos a intentar agregar imperativamente el texto del campo ```Address``` a la lista.  Para lograrlo necesitamos:
 - crear una ref llamada `ulRef` y asignarla a la ul
-- dentro del metodo handleAttachClick, queremos verificar que la ulRef no sea nula y que el  campo `Address` no este vacio. luego [creamos un elemento]('https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement')  tipo 'li' y asignamos su `innerText` al contenido del campo `Address`
+- dentro del metodo `handleAttachClick`, queremos verificar que la ulRef no sea nula y que el  campo `Address` no esté vacio. luego [creamos un elemento]('https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement')  tipo 'li' y asignamos su `innerText` al contenido del campo `Address`
 - usamos `.append()` para insertar el element que acabamos de crear dentro de la ul.
 
 Cabe aclarar que esto no va a funcionar si ya removimos el campo `Address`` con el boton anterior por lo que tenemos que recargar la pagina.
