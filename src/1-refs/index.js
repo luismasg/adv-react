@@ -52,3 +52,12 @@ export default function Refs() {
     </Router>
   )
 }
+/**
+ * ref 1 time
+ * ref 2  ñam fuck this
+ * ref 3 focus
+ * ref 4 user  ref
+ * ref 5 play video oh ok iguess
+ * ref 6 use ref again ¿! the fuck
+ *
+ */
