@@ -7,7 +7,7 @@ import Prework2 from './2-js-ref'
 import FocusCreateRef from './3-focus-createRef'
 import FocusUseRef from './4-focus-userRef'
 import Video from './5-video-createRef'
-import VideoUseRef from './6-video-useRef'
+import VideoDeclarative from './6-video-declarative'
 
 const Home = () => (
   <section className="fl w-100">
@@ -31,7 +31,7 @@ const Home = () => (
             <Link to="video">Video</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="video-useref">Video Use Ref</Link>
+            <Link to="VideoDeclarative">Video as declarative</Link>
           </li>
         </ul>
       </div>
@@ -48,7 +48,7 @@ export default function Refs() {
       <FocusCreateRef path="focus-create-ref" />
       <FocusUseRef path="focus-useref" />
       <Video path="video" />
-      <VideoUseRef path="video-useref" />
+      <VideoDeclarative path="VideoDeclarative" />
     </Router>
   )
 }
