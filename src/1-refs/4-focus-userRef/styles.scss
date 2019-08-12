@@ -1,0 +1,11 @@
+.forward-ref-example {
+  @import '../../base_styles';
+  input {
+    margin-left: 20px;
+    &:focus {
+      background-color: lighten(#112, 10%);
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+}

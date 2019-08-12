@@ -1,17 +1,17 @@
-import React, { useRef } from 'react'
+import React from 'react'
+import './styles.scss'
 
 function Focus() {
-  const ref = useRef(null)
   return (
-    <div className="pa4">
+    <div className="pa4 forward-ref-example">
       <button
         onClick={() => {
-          console.log(ref)
+          console.log('not implemented yet')
         }}
       >
         focus
       </button>
-      <input className="mh3" type="text" ref={ref} />
+      <input type="email" className="AppEmailInput" />
     </div>
   )
 }

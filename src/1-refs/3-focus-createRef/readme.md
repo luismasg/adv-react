@@ -4,7 +4,7 @@
 
 ### OBJETIVO
 
-Como utilizar el api de `createRef`
+Usar `createRef` para agregar elementos a una lista, llamar `.focus()` y borrar elementos del DOM
 
 #### REQUISITOS
 
