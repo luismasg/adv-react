@@ -115,7 +115,7 @@ Ahora usamos el hook `useEffect` para guardar  la funcion que recibimos como arg
 
 - Tenemos que importar `useEffect from 'react' `
 -  el metodo `useRef()` no solo es para guardar nodos. aqui lo usamos para guardar una referencia a nuestra funcion :scream:.
--   es el equivalente a una variable de instancia.
+es el equivalente a una variable de instancia.
 -  Al final está de nuevo declarando un array de dependencias para no volver a correr esta asignacion en cada re-render. 
 
 
