@@ -1,23 +1,13 @@
-import React from 'react'
-
 // Usage
-export default function UseDarkMode() {
+function App() {
   const [darkMode, setDarkMode] = useDarkMode()
 
   return (
-    <div className="fl w-90 ph3 pv3" darkMode={darkMode}>
-      <input
-        type="checkbox"
-        id="scales"
-        name="scales"
-        onChange={({ target }) => {
-          console.log('evt', target.checked)
-          setDarkMode(target.checked)
-        }}
-      />
-      <label htmlFor="scales" className="ph3">
-        Toggle
-      </label>
+    <div>
+      <div className="navbar">
+        <Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
+      </div>
+      <Content />
     </div>
   )
 }
@@ -38,15 +28,18 @@ function useDarkMode() {
     typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode
 
   // Fire off effect that add/removes dark mode class
-  useEffect(() => {
-    const className = 'dark-mode'
-    const element = window.document.body
-    if (enabled) {
-      element.classList.add(className)
-    } else {
-      element.classList.remove(className)
-    }
-  }, [enabled]) // Only re-call effect when value changes
+  useEffect(
+    () => {
+      const className = 'dark-mode'
+      const element = window.document.body
+      if (enabled) {
+        element.classList.add(className)
+      } else {
+        element.classList.remove(className)
+      }
+    },
+    [enabled], // Only re-call effect when value changes
+  )
 
   // Return enabled state and setter
   return [enabled, setEnabledState]
