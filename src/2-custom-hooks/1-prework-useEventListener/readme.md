@@ -227,7 +227,7 @@ export default  () => {
 ```
 
 
-Como nuestro hook tiene el tercer parametro opcional, si nose lo pasamos usame que es `window`
+Como nuestro hook tiene el tercer parametro opcional, si no se lo pasamos asume que es `window`
 
 
 
