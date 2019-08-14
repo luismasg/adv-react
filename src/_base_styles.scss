@@ -1,8 +1,11 @@
+$dark: #112;
+$constrast: #ffc600;
+
 & {
   padding: 20px;
   color: white;
   min-height: 100vh;
-  background-color: #112;
+  background-color: $dark;
   h1 {
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
   }
@@ -21,7 +24,7 @@
     font-weight: bold;
     color: white;
     border: none;
-    background-color: #ffc600;
+    background-color: $constrast;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
     &:hover {
       text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
@@ -30,7 +33,7 @@
       outline: none;
     }
     &:active {
-      background-color: darken(#ffc600, 5%);
+      background-color: darken($constrast, 5%);
     }
   }
 }

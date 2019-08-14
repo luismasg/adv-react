@@ -1,31 +1,38 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
+import './styles.scss'
 
-// Como usarlo
-export default function UseEventListener() {
-  // Estado para guardar las coordenadas del mouse
-  const [coords, setCoords] = useState([0, 0])
-  // Agregar event listener que usa el hook
-  useEventListener('mousemove', ({ clientX, clientY }) => {
-    // Update coordinates
-    setCoords([clientX, clientY])
-  })
+/**
+ * lo que los alumonos construiran es el hook en un archivo separado
+ * por lo que este archivo tendra menos import y el otro archivo no necesita React
+ */
+
+export default () => {
+  //state para guardar las coordenadas del mouse
+  const [coords, setCoords] = useState({ x: 0, y: 0 })
+
+  // un handler usando  useCallback para que la referencia nunca cambie
+
+  const handler = useCallback(
+    ({ clientX: x, clientY: y }) => {
+      // actualizar coordenadas
+      setCoords({ x, y })
+    },
+    [setCoords],
+  )
+
+  // agrega el eventListener usando nuestro hook
+  useEventListener('mousemove', handler)
 
   return (
-    <h1>
-      The mouse position is ({coords.x}, {coords.y})
-    </h1>
+    <div className="eventListener-1-demo">
+      the mouse position is ({coords.x}, {coords.y})
+    </div>
   )
 }
 
 // Hook
-function useEventListener(eventName, handler, element = global) {
-  // Crear un ref que guarda el handler
+function useEventListener(eventName, handler, element = window) {
   const savedHandler = useRef()
-
-  // Acutualizar el valor ref.current si hanlder cambia.
-  // Esto nos permite simpre tener el handler mas acutalizado
-  // sin necesidad de pasar un arreglo de dependencias
-  // y pontencialmente re-correr useEffext en cada render
 
   useEffect(() => {
     savedHandler.current = handler
@@ -33,21 +40,22 @@ function useEventListener(eventName, handler, element = global) {
 
   useEffect(
     () => {
-      // Asegurarse que el elemento soporta addEventListener
+      // asegurate que el element soporte addEventListener
+
       const isSupported = element && element.addEventListener
       if (!isSupported) return
 
-      // Crear un event listener que llama la funcion handler guardada en ref
+      //crea un eventListener que llama  la funcion handler guardada en ref
       const eventListener = event => savedHandler.current(event)
 
-      // Agregar event listener
+      // agrega el  event listener
       element.addEventListener(eventName, eventListener)
 
-      // Remover el event listener
+      // remueve el eventListener cuando termines.
       return () => {
         element.removeEventListener(eventName, eventListener)
       }
     },
-    [eventName, element], // Ejecutar useEffect si cambia el nombre del evento o el elemento
+    [eventName, element], // vuelve a correr solo si el eventName o el elemento cambia
   )
 }
