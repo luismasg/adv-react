@@ -1,5 +1,6 @@
 ##### DIY Redux
 
+<img src="logo.png" />
 ## recreando  Redux
 
 ### OBJETIVO
