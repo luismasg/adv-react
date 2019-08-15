@@ -1,6 +1,6 @@
 ##### EJERCICIO-2
 
-<img src="light-vs-dark.jpg" width:"100%"/>
+<img src="light-vs-dark.jpg" width="100%"/>
 
 ## useDarkMode
 
