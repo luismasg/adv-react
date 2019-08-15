@@ -1,6 +1,6 @@
 ##### EJERCICIO-2
 
-## useDarkMode
+<img src="light-vs-dark.png" />
 
 ### OBJETIVO
 
@@ -10,7 +10,6 @@ esto es, invertir los constrastes de la pagina para poder disfrutar de uan exper
 
 <details>
 
-
 <summary >Ejemplos</summary>
 
 <img  src="dark_vs_light.png" />
@@ -18,7 +17,7 @@ esto es, invertir los constrastes de la pagina para poder disfrutar de uan exper
 <img  src="dark_vs_light_2.png" />
 
 
-<details />
+</details >
 
 
 #### REQUISITOS
@@ -27,7 +26,16 @@ esto es, invertir los constrastes de la pagina para poder disfrutar de uan exper
 * Ejecutar `npm start` o `yarn start` en la raiz de este proyecto
 * Navegar a la pagina `http://localhost:8080/refs/video`
 
-#### Proposito
+#### DESARROLLO
 
+En la parte anterior , desribimos como crear tu propio hook.
+en este ejercicio te proveemos con  2 hooks custom bastante versatiles.
+
+- `useMedia` permite usar js para verificar si cumplimos las condiciones de cualquier media queria. regresa un booleano
+- `useLocalStorage`  es idéntico a `useState` excepto por el hecho que persiste tus datos a localStorage. Esto permite que la segunda vez que abras la aplicacion ya tengas cierta configuración guardada.
+Esto es importante por que estamos manejando un state que funciona de configuracion
+
+
+Esto es lo que intentamos construir
 
 

@@ -23,6 +23,10 @@ module.exports = {
         use: 'file-loader?name=videos/[name].[ext]',
       },
       {
+        test: /\.(png|jpg|jpeg|svg)$/,
+        use: 'file-loader?name=img/[name].[ext]',
+      },
+      {
         test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },

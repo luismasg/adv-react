@@ -1,12 +1,59 @@
+@import './layout';
 .hooks2-darkMode {
-  @import '../../base_styles';
-  font-size: 2rem;
-  padding: 2rem !important;
-  @media (prefers-color-scheme: dark) {
-    background-color: #363636 !important;
+  @import './toggle';
+  @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+  font-family: 'Merriweather', serif;
+  line-height: 2rem;
+  & > * {
+    padding: 20px;
   }
 
-  @media (prefers-color-scheme: light) {
-    background-color: aliceblue !important;
+  header {
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+    & > span {
+      margin-left: 20px;
+    }
   }
+  footer {
+    border-radius: 10px 10px 0 0;
+    border-bottom: none;
+  }
+  header,
+  footer {
+    display: flex;
+    align-items: center;
+  }
+  main {
+    border-radius: 0 10px 50px 0;
+  }
+  aside {
+    border-radius: 10px 0 0 10px;
+  }
+  section {
+    border-radius: 10px 0 0 50px;
+  }
+  img {
+    border-radius: 10px;
+    height: 450px;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  @import 'light_theme';
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+body.dark-mode .hooks2-darkMode {
+  @import 'dark_theme';
 }
