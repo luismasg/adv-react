@@ -99,8 +99,7 @@ function usePrefersDarkMode() {
 
 4. ahora tenemos que obtener el valor final de `dark-mode` . como comentamso anteriormente. damos prioridad a la configuracion local del browser.
    
-     `const enabled =
-    typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode` 
+     `const enabled = typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode` 
 
     esta linea esta comprobando que la variable enabledState este definida ( recuerda que esa variable viene de `useLocalStorage` ) y asigna su valor. en caso contraro usa el valor del sistema operativo.
 
@@ -124,7 +123,7 @@ function usePrefersDarkMode() {
 
   6. por ultimo regresamos un array de dos elementos. la variable enabled y la funcion para cambiarla. recuerdamos que estas dos vienen de `useLocalStorage`
 
-    `return [enabled, setEnabledState]`
+`return [enabled, setEnabledState]`
 
 
 
@@ -159,9 +158,9 @@ function useDarkMode() {
 
 
 
- regresando a nuestra funcion principal con el JSX , 
+ Regresando a nuestra funcion principal con el JSX , 
 
- llamamos useDarkMode() en la primer linea y extraemos `darkMode` y `setDarkmode`estas corresponden a  `enabled` y `setEnabledState`
+ llamamos useDarkMode() en la primer linea y extraemos `darkMode` y `setDarkmode` estas corresponden internamente a  `enabled` y `setEnabledState`
 
 
  ```js
@@ -173,3 +172,40 @@ export default function App() {
       <header>
       . . . 
  ```
+
+ Importamos `Toggle` y lo ponemso en el header en lugar del texto inicial , luego le pasamos el valor de darkmode y la funcion para actualizarla
+ tambien creamos un span con texto condicional a dark mode.
+
+ ```js
+export default function App() {
+  const [darkMode, setDarkMode] = useDarkMode()
+
+  return (
+    <div className="hooks2-darkMode">
+      <header>
+        <Toggle darkMode={darkMode} setDarkMode={setDarkMode} />
+        <span>
+          {darkMode
+            ? 'Dark mode enabled '
+            : 'too bright? try dimming the lights'}
+        </span>
+      </header>
+      . . .
+ ```
+
+ la img que tenemos queremos que cambie entre dos versiones diferentes de la imagen en base a darkmode
+
+por lo que cambia de  ` <img src={darkUI} />` a ` <img src={darkMode ? darkUI : lightUI} />` claro esta, tenemos que importa lightUi al principio del archivo con  `import lightUI from './my-ui-light.png'`
+
+en este punto solo estamos puliendo .
+
+nuevo footer : 
+
+```JSX
+<footer> {!darkMode ? 'Light' : 'Dark'} theme</footer>
+```
+
+Ahora nuestro componente deberia animar una transición de tonos de oscuro a claro cuando escojamos dark
+
+![light theme](ourLight.jpg "Dark Theme") ![Dark theme](ourDark.jpg "Dark Theme")
+
