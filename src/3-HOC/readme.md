@@ -1,10 +1,10 @@
-##### DIY Redux
+##### HOCs
 
-## recreando  Redux
+## Higher Order components
 
 ### OBJETIVO
 
-Obtener un entendimiento de las abstacciones que nos dá Redux  y pr que es necesario
+Practicar patrones de composicion utiles y realistas usando HOCs
 
 #### REQUISITOS
 

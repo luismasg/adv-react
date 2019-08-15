@@ -1,10 +1,10 @@
-##### DIY Redux
+<img src="auth0-logo-whitebg.svg">
 
-## recreando  Redux
+## Auth0
 
 ### OBJETIVO
 
-Obtener un entendimiento de las abstacciones que nos dá Redux  y pr que es necesario
+Obtener un entendimiento general de los requisitos para implementar Identidad y authentificacion con servicios externos.
 
 #### REQUISITOS
 

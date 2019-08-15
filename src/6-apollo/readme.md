@@ -1,10 +1,10 @@
-##### DIY Redux
+<img src="logo-apollo.png">
 
-## recreando  Redux
+## APOLLO
 
 ### OBJETIVO
 
-Obtener un entendimiento de las abstacciones que nos dá Redux  y pr que es necesario
+Practicar los principios de GraphQl y sus implicacions para microservicios.
 
 #### REQUISITOS
 
