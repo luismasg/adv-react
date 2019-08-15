@@ -137,8 +137,7 @@ function useDarkMode() {
   const prefersDarkMode = usePrefersDarkMode()
 
 //  Damos prioridad a el estado local , si no existe usamos la preferencia del sistema operativo para decidir si se activa  o no el dark mode
-  const enabled =
-    typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode
+  const enabled = typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode
 
 // Generamos los cambios en el dom para agregar la clase _solo si_ se requiere dark mode 
   useEffect(() => {
@@ -193,9 +192,9 @@ export default function App() {
       . . .
  ```
 
- la img que tenemos queremos que cambie entre dos versiones diferentes de la imagen en base a darkmode
+Queremos que la imagen cambie entre dos versiones diferentes de la imagen en base a darkmode
 
-por lo que cambia de  ` <img src={darkUI} />` a ` <img src={darkMode ? darkUI : lightUI} />` claro esta, tenemos que importa lightUi al principio del archivo con  `import lightUI from './my-ui-light.png'`
+por lo que cambia de  ` <img src={darkUI} />` a ` <img src={darkMode ? darkUI : lightUI} />` claro está, tenemos que importar lightUi al principio del archivo con  `import lightUI from './my-ui-light.png'`
 
 en este punto solo estamos puliendo .
 
@@ -235,7 +234,7 @@ Ahora nuestro componente deberia animar una transición de tonos de oscuro a cla
 
 #### Conclusiones
 
-Notaras la gran cantidad de codigo adicional en este ejercicio. empezando por el sass adicional. 
+Notarás la gran cantidad de codigo adicional en este ejercicio. empezando por el sass adicional. 
 en style.scss  importamos `light_theme.scss` en el componente base y luego importamos `dark_theme.scss`  si el elemento body tiene la clase `dark-mode` agregada
 
 ```
@@ -254,3 +253,4 @@ body.dark-mode .hooks2-darkMode {
 ```
 
 separar el scss en pequeños modulos nos permite separar los estilos del tema de cualquier otro estilo.
+te invitamos a explorar mas a fondo el funcionamiento de usemedia y localStorage pra entender como el usar hooks nos permitio abstraer  la complejidad adicional
