@@ -209,3 +209,23 @@ Ahora nuestro componente deberia animar una transición de tonos de oscuro a cla
 
 ![light theme](ourLight.jpg "Dark Theme") ![Dark theme](ourDark.jpg "Dark Theme")
 
+
+<details>
+
+<summary >Light </summary>
+
+<img  src="ourLight.jpg" />
+
+
+</details >
+
+
+<details>
+
+<summary >Dark</summary>
+
+
+<img  src="ourDark.jpg" />
+
+
+</details >
