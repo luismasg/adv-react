@@ -56,7 +56,7 @@ export default function App() {
         exercitationem. Corrupti eaque nisi aut hic?
       </aside>
       <section>
-        <h2>Great examples</h2>
+        <h2>Great links</h2>
 
         <ul>
           <li>
@@ -86,20 +86,19 @@ export default function App() {
 
 // Hook
 function useDarkMode() {
-  // Use our useLocalStorage hook to persist state through a page refresh.
-  // Read the recipe for this hook to learn more: usehooks.com/useLocalStorage
+  // usar useLocalStorage hook para persistir el estado entre refreshes.
   const [enabledState, setEnabledState] = useLocalStorage('dark-mode-enabled')
 
-  // See if user has set a browser or OS preference for dark mode.
-  // The usePrefersDarkMode hook composes a useMedia hook (see code below).
+  //confirmar si el usuario tiene una preferencia designada en el browser o el OS
+  //este hook hace composicion a useMedia mas abajo
   const prefersDarkMode = usePrefersDarkMode()
 
-  // If enabledState is defined use it, otherwise fallback to prefersDarkMode.
-  // This allows user to override OS level setting on our website.
+  //utiliza enabledState si está definido, si no, pasa a prefersDarkMode
+  //esto permite al usuario sobreescribir la cofiguracion de OS en nuestro sitio
   const enabled =
     typeof enabledState !== 'undefined' ? enabledState : prefersDarkMode
 
-  // Fire off effect that add/removes dark mode class
+  //llama el effecto que agrega o remueve la clase dakrmode
   useEffect(() => {
     const className = 'dark-mode'
     const element = window.document.body
@@ -108,17 +107,12 @@ function useDarkMode() {
     } else {
       element.classList.remove(className)
     }
-  }, [enabled]) // Only re-call effect when value changes
+  }, [enabled]) //solo volver a llamar si cambia el valor
 
-  // Return enabled state and setter
+  // retorna el estado y su setter
   return [enabled, setEnabledState]
 }
 
-// Compose our useMedia hook to detect dark mode preference.
-// The API for useMedia looks a bit weird, but that's because ...
-// ... it was designed to support multiple media queries and return values.
-// Thanks to hook composition we can hide away that extra complexity!
-// Read the recipe for useMedia to learn more: usehooks.com/useMedia
 function usePrefersDarkMode() {
   return useMedia(['(prefers-color-scheme: dark)'], [true], false)
 }

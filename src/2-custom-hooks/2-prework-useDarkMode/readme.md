@@ -207,8 +207,10 @@ nuevo footer :
 
 Ahora nuestro componente deberia animar una transición de tonos de oscuro a claro cuando escojamos dark
 
-![light theme](ourLight.jpg "Dark Theme") ![Dark theme](ourDark.jpg "Dark Theme")
 
+
+
+#### Resultados
 
 <details>
 
@@ -229,3 +231,26 @@ Ahora nuestro componente deberia animar una transición de tonos de oscuro a cla
 
 
 </details >
+
+
+#### Conclusiones
+
+Notaras la gran cantidad de codigo adicional en este ejercicio. empezando por el sass adicional. 
+en style.scss  importamos `light_theme.scss` en el componente base y luego importamos `dark_theme.scss`  si el elemento body tiene la clase `dark-mode` agregada
+
+```
+//styles.scss
+....
+  }
+  @import 'light_theme';
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+body.dark-mode .hooks2-darkMode {
+  @import 'dark_theme';
+}
+```
+
+separar el scss en pequeños modulos nos permite separar los estilos del tema de cualquier otro estilo.
