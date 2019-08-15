@@ -1,6 +1,6 @@
 ##### EJERCICIO-2
 
-<img src="light-vs-dark.png" />
+<img src="light-vs-dark.jpg" />
 
 ### OBJETIVO
 
