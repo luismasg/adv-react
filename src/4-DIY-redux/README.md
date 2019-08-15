@@ -1,11 +1,12 @@
 ##### DIY Redux
 
 <img src="logo.png" />
-## recreando  Redux
+
+## recreando  Redux desde cero
 
 ### OBJETIVO
 
-Obtener un entendimiento de las abstacciones que nos dá Redux  y pr que es necesario
+Obtener un entendimiento de las abstacciones que nos dá Redux  y por que es necesario
 
 #### REQUISITOS
 
