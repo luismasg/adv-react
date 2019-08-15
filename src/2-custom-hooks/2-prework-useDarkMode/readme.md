@@ -10,7 +10,7 @@ esto es, invertir los constrastes de la pagina para poder disfrutar de uan exper
 
 <details>
 
-<img  src="dark_vs_ligth.png" />
+<img  src="dark_vs_light.png" />
 <img  src="dark_vs_light.png" />
 
 <summary >Ejemplos</summary>
