@@ -8,13 +8,13 @@ export default function Refresher() {
       setHueComponent((srcElement.scrollTop / srcElement.offsetHeight) * 360)
     }
     if (sectionRef.current !== null) {
-      const sectionDomElement = this.sectionRef.current
+      const sectionDomElement = sectionRef.current
       sectionDomElement.addEventListener('scroll', handleScroll)
     }
   }, [sectionRef.current])
   return (
     <section
-      ref={this.sectionRef}
+      ref={sectionRef}
       style={{
         width: '100vw',
         height: '100vh',
