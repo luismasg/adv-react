@@ -1,6 +1,8 @@
 ##### EJERCICIO-2
 
-<img src="light-vs-dark.jpg" />
+<img src="light-vs-dark.jpg" width:"100%"/>
+
+## useDarkMode
 
 ### OBJETIVO
 
