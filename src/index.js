@@ -4,6 +4,7 @@ import { Router, Link } from '@reach/router'
 
 import Refs from './1-refs'
 import Hooks from './2-custom-hooks'
+import Hocs from './3-HOC'
 import DIYRedux from './4-DIY-redux'
 
 let Home = () => (
@@ -41,6 +42,7 @@ ReactDOM.render(
     <Router>
       <Home path="/" />
       <Refs path="refs/*" />
+      <Hocs path="hoc/*" />
       <Hooks path="hooks/*" />
       <DIYRedux path="redux/*" />
     </Router>
