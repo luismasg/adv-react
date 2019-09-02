@@ -6,6 +6,7 @@ import Refs from './1-refs'
 import Hooks from './2-custom-hooks'
 import Hocs from './3-HOC'
 import DIYRedux from './4-DIY-redux'
+import Auth0 from './5-auth0'
 
 let Home = () => (
   <section className="fl w-100">
@@ -45,6 +46,7 @@ ReactDOM.render(
       <Hocs path="hoc/*" />
       <Hooks path="hooks/*" />
       <DIYRedux path="redux/*" />
+      <Auth0 path="auth0/*" />
     </Router>
   </main>,
   document.querySelector('#root'),
