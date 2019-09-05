@@ -16,22 +16,22 @@ const Home = () => (
       <div className="pa3 pa5-ns">
         <ul className="list pl0 measure">
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="prework-1">Pure JS ref</Link>
+            <Link to="prework-1">Ejemplo 1: </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="prework-2">Pure JS ref</Link>
+            <Link to="prework-2">Ejercicio 1:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="focus-create-ref">Focus</Link>
+            <Link to="focus-create-ref">Ejemplo 2:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="focus-useref">Focus useRef</Link>
+            <Link to="focus-useref">Ejercicio 2:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="video">Video</Link>
+            <Link to="video">PostWork 1: </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="VideoDeclarative">Video as declarative</Link>
+            <Link to="VideoDeclarative">PostWork 2:</Link>
           </li>
         </ul>
       </div>
@@ -52,12 +52,3 @@ export default function Refs() {
     </Router>
   )
 }
-/**
- * ref 1 time
- * ref 2  ñam fuck this
- * ref 3 focus
- * ref 4 user  ref
- * ref 5 play video oh ok iguess
- * ref 6 use ref again ¿! the fuck
- *
- */
