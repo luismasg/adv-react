@@ -1,10 +1,12 @@
 import React from 'react'
 import { Router, Link } from '@reach/router'
 
-import Prework1 from './1-prework-useEventListener'
-import Prework2 from './2-prework-useDarkMode'
-import Refresher1 from './3-refresher'
-import Refresher2 from './4-refresher2'
+import Ejemplo1 from './Ejemplo1'
+import Ejercicio1 from './Ejercicio1'
+import Ejemplo2 from './Ejemplo2'
+import Ejercicio2 from './Ejercicio2'
+import Postwork1 from './Postwork1'
+import Postwork2 from './Postwork2'
 
 const Home = () => (
   <section className="fl w-100">
@@ -13,23 +15,25 @@ const Home = () => (
       <div className="pa3 pa5-ns">
         <ul className="list pl0 measure">
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="prework-1">useEventListener</Link>
+            <Link to="Ejemplo1">
+              Ejemplo 1 : Get coords on MouseMove (useEventListener)
+            </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="prework-2">useDarkmode</Link>
+            <Link to="Ejercicio1">Ejercicio 1: set Hue using Scroll</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="refresher1">Refresher 1</Link>
+            <Link to="Ejemplo2">Ejemplo 2: Set Dark mode </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="refresher2">Refresher 2</Link>
-          </li>
-          {/* <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            Grapefruit
+            <Link to="Ejercicio2">Ejercicio 2: Change doc title</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            Kiwi
-          </li> */}
+            <Link to="Postwork1">Postwork 1:</Link>
+          </li>
+          <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+            <Link to="Postwork2">Postwork 2:</Link>
+          </li>
         </ul>
       </div>
     </div>
@@ -40,10 +44,12 @@ export default function CustomHooks() {
   return (
     <Router>
       <Home path="/" />
-      <Prework1 path="prework-1" />
-      <Prework2 path="prework-2" />
-      <Refresher1 path="refresher1" />
-      <Refresher2 path="refresher2" />
+      <Ejemplo1 path="Ejemplo1" />
+      <Ejercicio1 path="prework-2" />
+      <Ejemplo2 path="Ejemplo2" />
+      <Ejercicio2 path="refresher2" />
+      <Postwork1 path="Postwork1" />
+      <Postwork2 path="Postwork2" />
     </Router>
   )
 }
