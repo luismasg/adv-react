@@ -4,10 +4,10 @@ import { Router, Link } from '@reach/router'
 
 import Ejemplo1 from './Ejemplo1'
 import Ejercicio1 from './Ejercicio1'
-import FocusCreateRef from './3-focus-createRef'
-import FocusUseRef from './4-focus-userRef'
-import Video from './5-video-createRef'
-import VideoDeclarative from './6-video-declarative'
+import Ejemplo2 from './Ejemplo2'
+import Ejercicio2 from './Ejercicio2'
+import Postwork1 from './Postwork1'
+import PostWork2 from './PostWork2'
 
 const Home = () => (
   <section className="fl w-100">
@@ -16,22 +16,24 @@ const Home = () => (
       <div className="pa3 pa5-ns">
         <ul className="list pl0 measure">
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejemplo1">Ejemplo 1: </Link>
+            <Link to="Ejemplo1">
+              Ejemplo 1:usando referencias con Timeouts{' '}
+            </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio1">Ejercicio 1:</Link>
+            <Link to="Ejercicio1">Ejercicio 1: un input no controlado</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="focus-create-ref">Ejemplo 2:</Link>
+            <Link to="Ejemplo2">Ejemplo 2:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="focus-useref">Ejercicio 2:</Link>
+            <Link to="Ejercicio2">Ejercicio 2:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="video">PostWork 1: </Link>
+            <Link to="Postwork1">PostWork 1: </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="VideoDeclarative">PostWork 2:</Link>
+            <Link to="PostWork2">PostWork 2:</Link>
           </li>
         </ul>
       </div>
@@ -45,10 +47,10 @@ export default function Refs() {
       <Home path="/" />
       <Ejemplo1 path="Ejemplo1" />
       <Ejercicio1 path="Ejercicio1" />
-      <FocusCreateRef path="focus-create-ref" />
-      <FocusUseRef path="focus-useref" />
-      <Video path="video" />
-      <VideoDeclarative path="VideoDeclarative" />
+      <Ejemplo2 path="Ejemplo2" />
+      <Ejercicio2 path="Ejercicio2" />
+      <Postwork1 path="Postwork1" />
+      <PostWork2 path="PostWork2" />
     </Router>
   )
 }
