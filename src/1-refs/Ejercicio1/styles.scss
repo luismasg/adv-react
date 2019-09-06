@@ -1,4 +1,4 @@
-.ref1-prework {
+.ref2-prework {
   padding: 20px;
   color: white;
   min-height: 100vh;
@@ -27,15 +27,8 @@
     &:hover {
       text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
     }
-    &:focus {
-      outline: none;
-    }
-    &:active {
-      background-color: darken(#ffc600, 5%);
-    }
   }
-  p {
-    width: 200px;
+  code {
     border-radius: 4px;
     padding: 10px;
     background-color: lighten(#112, 10%);
