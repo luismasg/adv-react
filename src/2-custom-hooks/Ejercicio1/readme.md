@@ -1,4 +1,4 @@
-##### Reto - 1
+##### Reto 1
 
 ## Creando tus propios hooks
 

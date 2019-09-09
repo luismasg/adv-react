@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 
 class Refresher extends Component {
   orgTitle = document.title
@@ -7,16 +7,20 @@ class Refresher extends Component {
   }
   changeVisibility = () => {
     if (document.hidden) {
-      document.title = 'I miss u'
+      document.title = 'I miss u 😓 '
     } else {
-      document.title = this.orgTitle
+      document.title = this.orgTitle + ' 🤟'
     }
   }
   componentWillUnmount() {
     document.removeEventListener('visibilitychange', this.changeVisibility)
   }
   render() {
-    return null
+    return (
+      <sup>
+        nothing is rendered. the document title changes if you change tab
+      </sup>
+    )
   }
 }
 

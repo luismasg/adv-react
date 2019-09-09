@@ -20,13 +20,13 @@ const Home = () => (
             </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio1">Reto 1: set Hue using Scroll</Link>
+            <Link to="Reto1">Reto 1: set Hue using Scroll</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Ejemplo2">Ejemplo 2: Set Dark mode </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio2">Reto 2: Change doc title</Link>
+            <Link to="Reto2">Reto 2: Change doc title</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Postwork1">
@@ -34,7 +34,7 @@ const Home = () => (
             </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Postwork2">Postwork 2:</Link>
+            <Link to="Postwork2">Postwork 2: localStorage(useState)</Link>
           </li>
         </ul>
       </div>
@@ -47,9 +47,9 @@ export default function CustomHooks() {
     <Router>
       <Home path="/" />
       <Ejemplo1 path="Ejemplo1" />
-      <Ejercicio1 path="prework-2" />
+      <Ejercicio1 path="Reto1" />
       <Ejemplo2 path="Ejemplo2" />
-      <Ejercicio2 path="refresher2" />
+      <Ejercicio2 path="Reto2" />
       <Postwork1 path="Postwork1" />
       <Postwork2 path="Postwork2" />
     </Router>

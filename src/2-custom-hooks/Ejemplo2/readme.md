@@ -1,4 +1,4 @@
-##### EJERCICIO-2
+##### Ejemplo 2
 
 <img src="light-vs-dark.jpg" width="100%"/>
 
