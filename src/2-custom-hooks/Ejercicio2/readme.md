@@ -1,4 +1,4 @@
-##### EJERCICIO-4
+##### Reto-2
 
 ## un refresher de lo que aprendimos
 
