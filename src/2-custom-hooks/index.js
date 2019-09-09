@@ -20,16 +20,18 @@ const Home = () => (
             </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio1">Ejercicio 1: set Hue using Scroll</Link>
+            <Link to="Ejercicio1">Reto 1: set Hue using Scroll</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Ejemplo2">Ejemplo 2: Set Dark mode </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio2">Ejercicio 2: Change doc title</Link>
+            <Link to="Ejercicio2">Reto 2: Change doc title</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Postwork1">Postwork 1:</Link>
+            <Link to="Postwork1">
+              Postwork 1: useCallback con window.resize
+            </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Postwork2">Postwork 2:</Link>

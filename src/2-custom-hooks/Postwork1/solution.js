@@ -1,10 +1,32 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
+// import './styles.scss'
+
+/**
+ * lo que los alumonos construiran es el hook en un archivo separado
+ * por lo que este archivo tendra menos import y el otro archivo no necesita React
+ */
 
 export default () => {
-  const WindowSize = {
-    innerWidth: 200,
-    innerHeight: 400,
-  }
+  //state para guardar las coordenadas del mouse
+  const [WindowSize, setWindowSize] = useState({
+    innerWidth: 0,
+    innerHeight: 0,
+  })
+
+  // un handler usando  useCallback para que la referencia nunca cambie
+
+  const handler = useCallback(
+    ({ target }) => {
+      // actualizar medidas
+      //   console.log(e.target.innerHeight)
+      const { innerWidth, innerHeight } = target
+      setWindowSize({ innerWidth, innerHeight })
+    },
+    [setWindowSize],
+  )
+
+  // agrega el eventListener usando nuestro hook
+  useEventListener('resize', handler)
 
   return (
     <div className="eventListener-1-demo">
