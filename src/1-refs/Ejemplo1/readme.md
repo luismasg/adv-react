@@ -1,4 +1,4 @@
-##### RETO-02
+##### Ejemplo 1
 
 ## Referencias en JS
 

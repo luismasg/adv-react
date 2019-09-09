@@ -1,4 +1,4 @@
-##### EJERCICIO-02
+##### Ejemplo 2
 
 ## Referencias en JS
 

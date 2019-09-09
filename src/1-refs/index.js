@@ -24,10 +24,10 @@ const Home = () => (
             <Link to="Ejercicio1">Reto 1: un input no controlado</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejemplo2">Ejemplo 2:</Link>
+            <Link to="Ejemplo2">Ejemplo 2: createRef y focus</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio2">Reto 2:</Link>
+            <Link to="Ejercicio2">Reto 2: useRef y focus con forwardRef </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Postwork1">PostWork 1: createRef y video </Link>
