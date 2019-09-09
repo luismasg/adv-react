@@ -21,19 +21,21 @@ const Home = () => (
             </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio1">Ejercicio 1: un input no controlado</Link>
+            <Link to="Ejercicio1">Reto 1: un input no controlado</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Ejemplo2">Ejemplo 2:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Ejercicio2">Ejercicio 2:</Link>
+            <Link to="Ejercicio2">Reto 2:</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Postwork1">PostWork 1: </Link>
+            <Link to="Postwork1">PostWork 1: createRef y video </Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="PostWork2">PostWork 2:</Link>
+            <Link to="PostWork2">
+              PostWork 2: usar refs de manera declarativa
+            </Link>
           </li>
         </ul>
       </div>
