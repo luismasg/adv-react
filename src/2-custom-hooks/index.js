@@ -2,11 +2,11 @@ import React from 'react'
 import { Router, Link } from '@reach/router'
 
 import Ejemplo1 from './Ejemplo1'
-import Ejercicio1 from './Ejercicio1'
+import Reto1 from './Reto1'
 import Ejemplo2 from './Ejemplo2'
-import Ejercicio2 from './Ejercicio2'
-import Postwork1 from './Postwork1'
+import Reto2 from './Reto2'
 import Ejemplo3 from './Ejemplo3'
+import Postwork1 from './Postwork1'
 
 const Home = () => (
   <section className="fl w-100">
@@ -47,9 +47,9 @@ export default function CustomHooks() {
     <Router>
       <Home path="/" />
       <Ejemplo1 path="Ejemplo1" />
-      <Ejercicio1 path="Reto1" />
+      <Reto1 path="Reto1" />
       <Ejemplo2 path="Ejemplo2" />
-      <Ejercicio2 path="Reto2" />
+      <Reto3 path="Reto2" />
       <Postwork1 path="Postwork1" />
       <Ejemplo3 path="Ejemplo3" />
     </Router>
