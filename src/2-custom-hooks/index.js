@@ -49,7 +49,7 @@ export default function CustomHooks() {
       <Ejemplo1 path="Ejemplo1" />
       <Reto1 path="Reto1" />
       <Ejemplo2 path="Ejemplo2" />
-      <Reto3 path="Reto2" />
+      <Reto2 path="Reto2" />
       <Postwork1 path="Postwork1" />
       <Ejemplo3 path="Ejemplo3" />
     </Router>
