@@ -6,7 +6,7 @@ import Ejercicio1 from './Ejercicio1'
 import Ejemplo2 from './Ejemplo2'
 import Ejercicio2 from './Ejercicio2'
 import Postwork1 from './Postwork1'
-import Postwork2 from './Postwork2'
+import Ejemplo3 from './Ejemplo3'
 
 const Home = () => (
   <section className="fl w-100">
@@ -29,12 +29,12 @@ const Home = () => (
             <Link to="Reto2">Reto 2: Change doc title</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+            <Link to="Ejemplo3">Ejemplo 3: localStorage(useState)</Link>
+          </li>
+          <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
             <Link to="Postwork1">
               Postwork 1: useCallback con window.resize
             </Link>
-          </li>
-          <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Postwork2">Postwork 2: localStorage(useState)</Link>
           </li>
         </ul>
       </div>
@@ -51,7 +51,7 @@ export default function CustomHooks() {
       <Ejemplo2 path="Ejemplo2" />
       <Ejercicio2 path="Reto2" />
       <Postwork1 path="Postwork1" />
-      <Postwork2 path="Postwork2" />
+      <Ejemplo3 path="Ejemplo3" />
     </Router>
   )
 }
