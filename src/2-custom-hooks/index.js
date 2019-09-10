@@ -32,9 +32,7 @@ const Home = () => (
             <Link to="Ejemplo3">Ejemplo 3: localStorage(useState)</Link>
           </li>
           <li className="lh-copy pv3 ba bl-0 bt-0 br-0 b--dotted b--black-30">
-            <Link to="Postwork1">
-              Postwork 1: useCallback con window.resize
-            </Link>
+            <Link to="Postwork1">Postwork: useCallback con window.resize</Link>
           </li>
         </ul>
       </div>
